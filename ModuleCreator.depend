@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1367527657 source:/home/pontocom/ModuleCreator/main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib/directory.h"
+
+1367330543 source:/home/pontocom/ModuleCreator/lib/directory.c
+	"directory.h"
+
+1367330541 /home/pontocom/ModuleCreator/lib/directory.h
+	<stdbool.h>
+

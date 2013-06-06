@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<{Module}>
+			<version>0.1</version>
+		</{Module}>
+	</modules>
+	<global>
+		<blocks>
+			<{Alias_Module}>
+				<class>{Module_Block}</class>
+			</{Alias_Module>
+		</blocks>
+	</global>
+	<frontend>
+		<routers>
+            <{Alias_Module}>
+                <use>standard</use>
+                <args>
+                    <module>{Module}</module>
+                    <frontName>pcomm_shipping</frontName>
+                </args>
+            <{Alias_Module}>
+        </routers>
+        <layout>
+            <updates>
+                <{Alias_Module}>
+                    <file>{file}</file>
+                </{Alias_Module}>
+            </updates>
+        </layout>
+	</frontend>
+</config>
