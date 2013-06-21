@@ -10,3 +10,29 @@
 1367330541 /home/pontocom/ModuleCreator/lib/directory.h
 	<stdbool.h>
 
+1370981338 source:/home/pontocom/ModuleCreatorMagento/lib/directory.c
+	"directory.h"
+
+1370981468 /home/pontocom/ModuleCreatorMagento/lib/directory.h
+	<stdbool.h>
+
+1371660354 source:/home/pontocom/ModuleCreatorMagento/main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib/directory.h"
+	"lib/template.h"
+
+1371661053 source:/home/pontocom/ModuleCreatorMagento/lib/util.c
+	"util.h"
+
+1371660948 /home/pontocom/ModuleCreatorMagento/lib/util.h
+	<stdio.h>
+	<stdbool.h>
+
+1371232212 /home/pontocom/ModuleCreatorMagento/lib/template.h
+	<stdio.h>
+
+1371674498 source:/home/pontocom/ModuleCreatorMagento/lib/template.c
+	"template.h"
+	"util.h"
+

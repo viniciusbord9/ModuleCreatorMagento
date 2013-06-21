@@ -18,6 +18,10 @@ int verified_folder(char *path){
     return 0;
 }
 
-void create_template(){
-    return;
+int set_path(char* path){
+    module_name = path;
+}
+
+char* get_path(){
+    return module_name
 }

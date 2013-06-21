@@ -36,6 +36,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lib/directory.h" />
+		<Unit filename="lib/template.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib/template.h" />
+		<Unit filename="lib/util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib/util.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

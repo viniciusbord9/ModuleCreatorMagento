@@ -9,7 +9,7 @@
 		<blocks>
 			<{Alias_Module}>
 				<class>{Module_Block}</class>
-			</{Alias_Module>
+			</{Alias_Module}>
 		</blocks>
 	</global>
 	<frontend>

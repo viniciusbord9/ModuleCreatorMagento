@@ -15,7 +15,4 @@ int create_folder(char* path);
 
 char* get_path();
 
-void create_template();
-
-
 #endif // DIRECTORY_H_INCLUDED
