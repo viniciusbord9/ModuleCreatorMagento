@@ -3,18 +3,17 @@
 #include "lib/directory.h"
 #include "lib/template.h"
 
-char *name_space;
-char *module_name;
-
 int verified_namespace(char *n_space);
 
 int main(int arg, char *args[])
 {
+    /*set_folder_template();*/
     if(args[1]!=NULL)
     {
         printf("Projeto: %s \n",args[1]);
         if(args[2]!=NULL && verified_folder(args[1]))
         {
+            path = args[1];
             printf("Namespace: %s\n",args[2]);
             int verified = verified_namespace(args[2]);
             if(verified==1)
@@ -23,6 +22,7 @@ int main(int arg, char *args[])
                 printf("criando pasta do modulo \n");
                 if(create_folder(args[3]))
                 {
+                    module = args[3];
                     printf("pasta criada \n");
                     char* option;
                     scanf("tipo do modulo %s\n",&option);
@@ -48,7 +48,7 @@ int main(int arg, char *args[])
                         {
                             printf("pasta criada \n");
                             chdir(args[3]);
-                            module_name = args[3];
+                            set_module(args[3]);
                             printf("selecione a opção de módulo que você deseja\n");
                             printf("1. simples(etc/config.xml, diretório controller e Block ).\n2. básico (todos os diretórios e também o arquivo de configuração). \n");
                             int option;
@@ -56,7 +56,7 @@ int main(int arg, char *args[])
                             scanf("%d",&option);
                             printf("opção escolhida %d\n",option);
                             printf("criando template");
-                            create_template(option,&name_space,&module_name);
+                            create_template(option);
                         }
                         else
                         {

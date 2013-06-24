@@ -19,9 +19,40 @@ int verified_folder(char *path){
 }
 
 int set_path(char* path){
-    module_name = path;
+    module = path;
 }
 
 char* get_path(){
-    return module_name
+    return module;
+}
+
+int set_name_space(char* name_space){
+    name_space = name_space;
+}
+
+int set_module(char* module){
+    module = module;
+}
+
+char* get_name_space(){
+    return name_space;
+}
+
+char* get_module(){
+    return module;
+}
+
+int set_folder_template(){
+    char* path = _fullpath(NULL, ".", 0);
+    char* folder = "\\Template";
+    char* aux = (char*) malloc (sizeof(path));
+    strcpy(aux,path);
+    strcat(aux,folder);
+    template_folder = aux;
+    free(&folder);
+    return;
+}
+
+char* get_folder_template(){
+    return template_folder;
 }

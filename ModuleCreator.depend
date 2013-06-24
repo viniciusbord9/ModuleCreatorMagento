@@ -36,3 +36,32 @@
 	"template.h"
 	"util.h"
 
+1371868695 source:c:\users\vinicius\documents\modulecreatormagento\lib\directory.c
+	"directory.h"
+
+1371862177 c:\users\vinicius\documents\modulecreatormagento\lib\directory.h
+	<stdbool.h>
+	<string.h>
+	<stdlib.h>
+
+1371947219 source:c:\users\vinicius\documents\modulecreatormagento\lib\template.c
+	"template.h"
+	"util.h"
+
+1371860401 c:\users\vinicius\documents\modulecreatormagento\lib\template.h
+	<stdio.h>
+	<stdlib.h>
+
+1371856820 c:\users\vinicius\documents\modulecreatormagento\lib\util.h
+	<stdio.h>
+	<stdbool.h>
+
+1371856860 source:c:\users\vinicius\documents\modulecreatormagento\lib\util.c
+	"util.h"
+
+1371869480 source:c:\users\vinicius\documents\modulecreatormagento\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib/directory.h"
+	"lib/template.h"
+

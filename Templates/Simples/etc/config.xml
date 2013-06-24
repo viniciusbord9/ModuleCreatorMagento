@@ -18,9 +18,9 @@
                 <use>standard</use>
                 <args>
                     <module>{Module}</module>
-                    <frontName>pcomm_shipping</frontName>
+                    <frontName>{Front_Name}</frontName>
                 </args>
-            <{Alias_Module}>
+            </{Alias_Module}>
         </routers>
         <layout>
             <updates>

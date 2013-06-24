@@ -4,5 +4,6 @@
 #include <stdbool.h>
 
 int copy_file(FILE* origin, FILE* destiny);
+char* concat_string(char* fisrt, char* second);
 
 #endif // UTIL_H_INCLUDED
