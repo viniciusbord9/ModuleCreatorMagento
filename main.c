@@ -7,7 +7,7 @@ int verified_namespace(char *n_space);
 
 int main(int arg, char *args[])
 {
-    /*set_folder_template();*/
+    set_folder_template();
     if(args[1]!=NULL)
     {
         printf("Projeto: %s \n",args[1]);

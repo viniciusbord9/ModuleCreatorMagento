@@ -1,5 +1,13 @@
 #ifndef DIRECTORY_H_INCLUDED
 #define DIRECTORY_H_INCLUDED
+#include <stdio.h>  /* defines FILENAME_MAX */
+#ifdef WINDOWS
+    #include <direct.h>
+    #define GetCurrentDir _getcwd
+#else
+    #include <unistd.h>
+    #define GetCurrentDir getcwd
+ #endif
 #include <stdbool.h>
 #include <string.h>
 #include <stdlib.h>
@@ -9,6 +17,7 @@ char *name_space;
 char *project;
 char *template_folder;
 char *path;
+char cCurrentPath[FILENAME_MAX];
 
 bool verified_project(char *project);
 
@@ -31,5 +40,7 @@ char* get_module();
 int set_folder_template();
 
 char* get_folder_template();
+
+char* get_template_config_path();
 
 #endif // DIRECTORY_H_INCLUDED

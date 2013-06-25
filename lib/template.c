@@ -10,14 +10,14 @@ int create_template(option){
 }
 
 int create_config(){
-   mkdir("etc");
+   mkdir("etc",0777);
     if(chdir("etc") == 0){
         set_config();
         return 1;
-        //FILE* destiny = fopen("config.xml","w");
-        //copy_files(origin,destiny);
-        //fclose(destiny);
-        //fclose(origin);
+        /*FILE* destiny = fopen("config.xml","w");
+        copy_files(origin,destiny);
+        fclose(destiny);
+        fclose(origin);*/
         return 0;
     }else{
         printf("erro ao entrar na pasta etc");
@@ -27,10 +27,17 @@ int create_config(){
 }
 
 void set_config(){
-    char* path_config = "C:\\Users\\vinicius\\Documents\\ModuleCreatorMagento\\Templates\\Simples\\etc\\config.xml";
+    /*char* path_config = "C:\\Users\\vinicius\\Documents\\ModuleCreatorMagento\\Templates\\Simples\\etc\\config.xml";*/
+    /*char* path_config = "/home/pontocom/ModuleCreatorMagento/Templates/Simples/etc/config.xml";*/
+    char* path_config = get_template_config_path();
     FILE* origin = fopen(path_config,"r");
     FILE* config = fopen("config.xml","w");
     char ch;
+    if(origin == NULL){
+        printf("ERROR: não foi possivel abrir o arquivo de configuração do template");
+        return;
+    }
+
     if(config == NULL){
         printf("ERROR: Não foi possível abrir o arquivo de configuração");
         return;
@@ -62,17 +69,21 @@ void set_config(){
             char tag[count_char];
             strncpy(tag,options,count_char);
             if(strncmp(tag,"{Module}",count_char-1)==0){
-                //fseek(config, ftell(origin)-8,SEEK_SET);
-                fputs("Teste",config);
+                /*char* module_name[sizeof(get_name_space())+sizeof(get_module())];
+                strcat(module_name,get_name_space());
+                strcat(module_name,get_module());
+                fputs(module_name,config);*/
+                fputs("TesteTeste",config);
+
             }
 
             if(strncmp(tag,"{Alias_Module}",count_char-1)==0){
-                //fseek(config, ftell(origin)-14,SEEK_SET);
+                /*fseek(config, ftell(origin)-14,SEEK_SET);*/
                 fputs("teste_teste",config);
             }
 
             if(strncmp(tag,"{Front_Name}",count_char-1)==0){
-                //fseek(config, ftell(origin)-11,SEEK_SET);
+                /*fseek(config, ftell(origin)-11,SEEK_SET);*/
                 fputs("FirstModule",config);
             }
 

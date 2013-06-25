@@ -43,16 +43,24 @@ char* get_module(){
 }
 
 int set_folder_template(){
-    char* path = _fullpath(NULL, ".", 0);
-    char* folder = "\\Template";
-    char* aux = (char*) malloc (sizeof(path));
-    strcpy(aux,path);
-    strcat(aux,folder);
-    template_folder = aux;
-    free(&folder);
+    if(!GetCurrentDir(cCurrentPath, sizeof(cCurrentPath)))
+    {
+        return 0;
+    }
+
+    cCurrentPath[sizeof(cCurrentPath) - 1] = '\0'; /* not really required */
     return;
 }
 
 char* get_folder_template(){
-    return template_folder;
+    return cCurrentPath;
+}
+
+char* get_template_config_path(){
+    char* relative_config_path = "/Template/Simples/etc/config.xml";
+    int size_path = sizeof(cCurrentPath) + sizeof(relative_config_path);
+    char config_path[size_path];
+    strcat(config_path,cCurrentPath);
+    strcat(config_path,relative_config_path);
+    return config_path;
 }
